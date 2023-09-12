@@ -98,6 +98,9 @@ body {
 /* GRID SYSTEM */
 .row {
     --gridgap: 2em;
+}
+@media (min-width: 768px) {
+.row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--gridgap);
@@ -114,17 +117,18 @@ body {
 .one-half.centered { grid-column-start: 4; }
 .one-third.centered { grid-column-start: 5; }
 .two-third.centered { grid-column-start: 3; }
-
+}
 
 /* DEMO GRID ONLY */
 .demo .row {
-    margin-bottom: var(--gridgap);
+    /* margin-bottom: var(--gridgap); */
 }
 
 .demo .row > * {
     background: rgb(0 0 0 / .1);
     padding: 1em;
     text-align: center;
+    margin-bottom: var(--gridgap);
 }
 
 .demo p {
