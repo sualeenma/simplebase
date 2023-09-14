@@ -6,6 +6,7 @@ CSS TABLE OF CONTENTS
     # GLOBAL RESETS
     # CLOBAL COLORS
     # GLOBAL TYPOGRAPHY
+    # GLOBAL MEDIA (eg Images)
 
 # LAYOUT
     # MEDI QUERIES (W/ RSPONSIVE TYPOGRAPHY)
@@ -89,15 +90,23 @@ body {
     body {font-size: 112.5%;}
 }
 
+/* RESPONSIVE IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* CONTAINER */
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1em;
 }
 
 /* GRID SYSTEM */
 .row {
     --gridgap: 2em;
+    margin-bottom: 4em;
 }
 @media (min-width: 768px) {
     .row {
@@ -106,6 +115,17 @@ body {
         gap: var(--gridgap);
     }
 
+.row.vertical-centered {
+    align-items: center;
+}
+
+.row.swapped > *:first-child {
+    order: 2;
+}
+
+.row.swapped > *:last-child {
+    order: 1;
+}
 
 .one-whole { grid-column: span 12 / span 12; }
 .one-half { grid-column: span 6 / span 6; }
@@ -121,7 +141,7 @@ body {
 
 /* DEMO GRID ONLY */
 .demo .row {
-    /* margin-bottom: var(--gridgap); */
+    margin-bottom: 0;
 }
 
 .demo .row > * {
