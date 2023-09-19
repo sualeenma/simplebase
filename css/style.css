@@ -11,7 +11,15 @@ CSS TABLE OF CONTENTS
 # LAYOUT
     # MEDI QUERIES (W/ RSPONSIVE TYPOGRAPHY)
     # CONTAINER
-    # GRID
+    # GRID (ROWS & COLUMNS)
+
+# PAGE STRUCTURE (BASE TEMPLATE)
+    # HEADER
+        # SITE LOGO
+        # SITE NAV
+    # MAIN
+        #SECTIONS
+    # FOOTER
 
 # CUSTOM STYLING
     #CUSTOM TYPE BLOCK/SPECIMEN
@@ -156,10 +164,58 @@ img {
     max-width: none;
 }
 
+/* ------------------------ */
+/* -----PAGE STRUCTURE----- */
+/* ------------------------ */
 
-/* -------------- */
-/* CUSTOM STYLING */
-/* -------------- */
+.site-header {
+    background-color: rgb(0 0 0 / .1);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .site-logo {
+    display: flex;
+    gap: 1em;
+}
+
+.site-header img {
+    display: block;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.site-header a {
+    text-decoration: none;
+}
+
+.site-header .site-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.site-header .site-nav a {
+    display: block;
+    padding: 1em;
+}
+
+.site-main {
+    background-color: pink;
+}
+
+.site-footer {
+    background-color: rgb(140, 210, 210);
+}
+
+/* ------------------------ */
+/* -----CUSTOM STYLING----- */
+/* ------------------------ */
 
 
 /* CUSTOM TYPE BLOCK: HEADLINE AND SUB HEADLINE */
@@ -169,6 +225,7 @@ img {
     margin: 1rem 0;
     line-height: 1;
 }
+
 .subheadline {
     font-size: 2em;
     font-weight: normal;
