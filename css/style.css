@@ -42,8 +42,12 @@ CSS TABLE OF CONTENTS
     --color-links: rgb(51 102 204 / 1);
     --color-links-dark: rgb(0 51 153 / 1);
     --color-accent-color: rgb(102, 204, 124);
-    --color-header-bg: rgb(0 0 0 / .1);
-    --color-footer-bg: rgb(0 0 0 / .2);
+    --color-header-bg: rgb(105, 0, 102);
+    --color-header-links: rgb(255, 255, 255);
+    --color-hero-bg: rgb(234, 149, 231);
+    --color-footer-bg: rgb(0 0 0 / 1);
+    --color-footer-text: rgb(255, 255, 255);
+    --color-footer-links: rgb(227, 162, 238);
 
 
     /* BASE TYPOGRAPHY */
@@ -200,6 +204,7 @@ img {
 
 .site-header .site-logo {
     display: flex;
+    align-items: center;
     gap: 1em;
 }
 
@@ -214,6 +219,7 @@ img {
 
 .site-header a {
     text-decoration: none;
+    color: var(--color-header-links);
 }
 
 .site-header .site-nav ul {
@@ -239,14 +245,22 @@ section {
 
 /* HERO SECTION */
 .hero {
-    background-color: pink;
+    background-color: var(--color-hero-bg);
 }
 
 /* SITE FOOTER */
 .site-footer {
     background-color: var(--color-footer-bg);
-    padding: 3em 0;
+    color: var(--color-footer-text);
+    padding: 5em 0;
 }
+
+.site-footer h1,
+.site-footer h2,
+.site-footer h3 {
+    color: var(--color-footer-text);
+}
+
 
 .site-footer .site-nav ul {
     list-style: none;
@@ -256,6 +270,7 @@ section {
 
 .site-footer a {
     text-decoration: none;
+    color: var(--color-footer-links);
 }
 
 
